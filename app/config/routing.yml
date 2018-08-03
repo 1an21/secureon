@@ -1,0 +1,10 @@
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix: "/doc"
+clients:
+    resource: "@AppBundle/Controller"
+    type: annotation
+
+another:
+    resource: "@AppBundle/Controller/AnotherController.php"
+    type: rest

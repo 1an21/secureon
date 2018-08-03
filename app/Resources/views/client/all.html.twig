@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('create')}}" class="btn btn-default btn-sm" style="float: right">Create</a>
+    <table class="table table-hover table-responsive">
+        <thead>
+        <tr>
+            <th class="col-sm-2 ">Name</th>
+            <th class="col-sm-2 ">Phone</th>
+            <th class="col-sm-2 ">Email</th>
+            <th class="col-sm-3">Ip Address</th>
+            <th class="col-sm-3">Mac Address</th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+    {% for client in clients %}
+    <tr>
+    <td>{{ client.clientName }}</td>
+    <td>{{ client.phone }}</td>
+    <td>{{ client.email }}</td>
+    <td>{{ client.ipAddress }}</td>
+    <td>{{ client.macAddress }}</td>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Secureon{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <style>
+        .field {clear:both; text-align:right; line-height:25px;}
+        label {float:left; padding-right:20px;    margin-bottom: 0;}
+        .main {float:left}
+
+        body {
+            padding-top: 90px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="">ABZ</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-12">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+
+</div><!-- /.container -->
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>
